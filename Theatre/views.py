@@ -5,7 +5,7 @@ from django.shortcuts import render
 from polls.models import Performance, Movie
 
 def home(request):
-    #dictionary to be passed into the tepmlate render object.
+    #dictionaries to be passed into the template render object.
     Performance_array = Performance.objects.all()
     Movie_array = Movie.objects.all()
     random_dictionary = {'testing': Movie_array[0].name}
@@ -13,7 +13,8 @@ def home(request):
     template = get_template('home.html')
     #fills in template tags with corresponing text from dicitonary
     html = template.render(Context(random_dictionary))
-    return HttpResponse(html)
+    #return HttpResponse(html)
+    return render(request, 'location.html', {})
 
 def merch(request):
     return render(request, 'merch.html')
