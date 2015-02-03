@@ -1,14 +1,11 @@
-<html>
-	<!-- Bootstrap -->
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	<head>
-		<title>The Everything Theatre - {% block title %} Welcome All {% endblock %}</title>
-	</head>
+{% extends "base.html" %}
+
+{% block title %} Welcome All {% endblock %}
+
+{% block content %} this is a home page... {{ testing }} {% endblock %}
+
+<!DOCTYPE html>
 
 <body>
-	{% block content %}
-	this is a home page... {{ testing }} 
-	{% endblock %}
 </body>	
 </html>
