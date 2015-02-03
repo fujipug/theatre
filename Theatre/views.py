@@ -11,3 +11,6 @@ def home(request):
     #fills in template tags with corresponing text from dicitonary
     html = template.render(Context(random_dictionary))
     return HttpResponse(html)
+
+def merch(request):
+    return render(request, 'merch.html')

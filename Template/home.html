@@ -1,1 +1,14 @@
-<html> this is a home page... {{ testing }} </html>
+<html>
+	<!-- Bootstrap -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<head>
+		<title>Le Theatre - {% block title %} Default Title {% endblock %}</title>
+	</head>
+
+<body>
+	{% block content %}
+	this is a home page... {{ testing }} 
+	{% endblock %}
+</body>	
+</html>
