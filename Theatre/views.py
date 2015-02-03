@@ -14,3 +14,6 @@ def home(request):
 
 def merch(request):
     return render(request, 'merch.html')
+
+def tickets(request):
+    return render(request, 'tickets.html')
