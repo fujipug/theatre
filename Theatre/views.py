@@ -13,8 +13,8 @@ def home(request):
     template = get_template('home.html')
     #fills in template tags with corresponing text from dicitonary
     html = template.render(Context(random_dictionary))
-    #return HttpResponse(html)
-    return render(request, 'location.html', {})
+    return HttpResponse(html)
+    #return render(request, 'location.html', {}) #for testing other pages
 
 def merch(request):
     return render(request, 'merch.html')
