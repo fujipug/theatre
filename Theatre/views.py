@@ -24,14 +24,14 @@ def tickets(request):
 
 def upcoming_performances(request):
     Performance_array = Performance.objects.all()
-    Performance_dictionary = {'performance': Performance_array[0].date}
+    Performance_dictionary = {'Performance': Performance_array}
     template = get_template('upcoming_performances.html')
     html = template.render(Context(Performance_dictionary))
     return HttpResponse(html)
 
 def home_nontest_v(request):
-    return render(request, 'home_nontest_v.html')    
-    
+    return render(request, 'home_nontest_v.html')
+
 
 
 #how to add entry to database:

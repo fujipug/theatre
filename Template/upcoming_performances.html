@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-            <title>Upcoming Performances</title> 
+            <title>Upcoming Performances</title>
             <!-- Le styles. Oui Oui -->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3./css/bootstrap.min.css">
 
@@ -11,9 +11,17 @@
 <body>
 	<h1>Upcoming Permormances</h1>
 
-	coming soon ....{{ performance }}
+	coming soon ....
+    {% for p in Performance%}
+    <h2>{{ p.name }}</h2><br>
+    {{p.date}} at {{p.time}}<br>
+    {{p.description}}
+    {%endfor%}
 
-	
+
+
+
+
 
 </body>
 </html>
