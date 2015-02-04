@@ -5,22 +5,33 @@ from django.shortcuts import render
 from polls.models import Performance, Movie
 
 def home(request):
-    #dictionaries to be passed into the template render object.
+    #dictionary to be passed into the tepmlate render object.
     Performance_array = Performance.objects.all()
     Movie_array = Movie.objects.all()
+    Performance_dictionary = {'performance': Performance_array[0].date}
     random_dictionary = {'testing': Movie_array[0].name}
     #gets template from Template folder
     template = get_template('home.html')
     #fills in template tags with corresponing text from dicitonary
     html = template.render(Context(random_dictionary))
     return HttpResponse(html)
-    #return render(request, 'location.html', {}) #for testing other pages
 
 def merch(request):
     return render(request, 'merch.html')
 
 def tickets(request):
     return render(request, 'tickets.html')
+
+def upcoming_performances(request):
+    Performance_array = Performance.objects.all()
+    Performance_dictionary = {'performance': Performance_array[0].date}
+    template = get_template('upcoming_performances.html')
+    html = template.render(Context(Performance_dictionary))
+    return HttpResponse(html)
+
+def home_nontest_v(request):
+    return render(request, 'home_nontest_v.html')    
+    
 
 
 #how to add entry to database:
