@@ -1,14 +1,52 @@
-<html>
+<!DOCTYPE html>
+	<head>
 	<!-- Bootstrap -->
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	<head>
-		<title>The Everything Theatre - {% block title %} Welcome All {% endblock %}</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'home.css' %}">
+	<title>The Everything Theatre - {% block title %} Welcome All {% endblock %}</title>
 	</head>
 
 <body>
-	{% block content %}
-	Default Content
-	{% endblock %}
+<div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Cover</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">{% block heading %}The Everything Theatre{% endblock %}</h1>
+	    
+            <p class="lead">{% block lead %} Ladies and gentleman, boys and girls; Welcome to The Evrything Theatre. {% endblock %}</p>
+            <p class="lead">
+                {% block content %}
+		Default Content
+		{% endblock %}
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Find us on: <a href="#">Facebook, etc.</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+	
 </body>	
 </html>
