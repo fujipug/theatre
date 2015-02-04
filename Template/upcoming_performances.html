@@ -1,27 +1,25 @@
-<!DOCTYPE html>
+<!--
 <html lang="en">
     <head>
         <meta charset="utf-8">
             <title>Upcoming Performances</title>
-            <!-- Le styles. Oui Oui -->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3./css/bootstrap.min.css">
 
             <link rel="stylesheet" href="../Theatre/Static/home.css">
 
-<body>
-	<h1>Upcoming Permormances</h1>
+			<body> -->
+{% extends "base.html" %}
 
-	coming soon ....
+{% block title %}Upcoming Performances{% endblock %}
+{% block header1 %}Upcoming Performances{% endblock %}
+<!--<h1>Upcoming Permormances</h1>-->
+
+{% block lead %}coming soon ....{% endblock %}
+{% block content %}
     {% for p in Performance%}
-    <h2>{{ p.name }}</h2><br>
+	<h2><a id="{{ p.name }}">{{ p.name }}</a></h2><br>
     {{p.date}} at {{p.time}} price is: {{p.price}}<br>
     {{p.description}}
-    {%endfor%}
+	{% endfor %}
+{% endblock %}
 
-
-
-
-
-
-</body>
-</html>
