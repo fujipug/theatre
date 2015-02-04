@@ -56,6 +56,7 @@ def home_nontest_v(request):
 #how to add table to the database:
     #1. Open polls\models.py
     #2. Create a new model (each model acts as a table)
+    #3. from CMD "python manage.py makemigrations"
     #3. from CMD "python manage.py check"
-    #4. STOP if you have any errrors
+    #4. STOP if you have any errors
     #5. "python manage.py migrate"
