@@ -7,14 +7,14 @@
 {% block lead %} Some tickets and merchandise ...{% endblock %}
 
 {% block content %}
-Movies: <br>
+<h2>Movies</h2>
 {% for m in Movie%}
-    {{ m.name }} - {{m.price}}<br>
+    {{ m.name }} - ${{m.price}}<br>
 {%endfor%}
-<br>
-Performances: <br>
+
+<h2>Performances</h2>
 {% for p in Performance%}
-    {{ p.name }} - {{p.price}}<br>
+<a href="/upcoming_performances#{{ p.name }}">{{ p.name }}</a> - ${{p.price}}<br>
 {%endfor%}
 
 {% endblock %}
