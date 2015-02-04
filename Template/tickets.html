@@ -1,10 +1,23 @@
+<html>
+<body>
 {% extends "base.html" %}
 
 {% block title %} TICKETS {% endblock %}
 
-{% block content %} some tickets and stuff {% endblock %}
 
-<html>
-<body>
+{% block content %}
+Movies: <br>
+{% for m in Movie%}
+    {{ m.name }} - {{m.price}}<br>
+{%endfor%}
+<br>
+Performances: <br>
+{% for p in Performance%}
+    {{ p.name }} - {{p.price}}<br>
+{%endfor%}
+
+{% endblock %}
+
+
 </body>
 </html>

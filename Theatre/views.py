@@ -20,7 +20,13 @@ def merch(request):
     return render(request, 'merch.html')
 
 def tickets(request):
-    return render(request, 'tickets.html')
+    Movie_array = Movie.objects.all()
+    Performance_array = Performance.objects.all()
+    pass_in_dictionary = {'Movie': Movie_array, 'Performance': Performance_array}
+    template = get_template('tickets.html')
+    html = template.render(Context(pass_in_dictionary))
+    return HttpResponse(html)
+    #return render(request, 'tickets.html')
 
 def upcoming_performances(request):
     Performance_array = Performance.objects.all()
