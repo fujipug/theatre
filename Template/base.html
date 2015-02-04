@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <head>
-	<meta charset="utf-8">
-	<!-- Bootstrap -->
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	{% load staticfiles %}
-	<link rel="stylesheet" href="{% static 'home.css' %}">
-	<title>{% block title %}Welcome All{% endblock %}</title>
+  <meta charset="utf-8">
+  <!-- Bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'home.css' %}">
+  <title>{% block title %}Welcome All{% endblock %}</title>
 </head>
 <body>
-<div class="site-wrapper">
+  <div class="site-wrapper">
 
-      <div class="site-wrapper-inner">
+    <div class="site-wrapper-inner">
 
-        <div class="cover-container">
+      <div class="cover-container">
 
-          <div class="masthead clearfix">
-            <div class="inner">
-	      <h3 class="masthead-brand"><a href="/">Everything Theatre</a></h3>
-              <nav>
-                <ul class="nav masthead-nav">
-                  <li><a href="/upcoming_performances">Performances</a></li>
-                  <li><a href="/tickets">Tickets</a></li>
-                </ul>
-              </nav>
-            </div>
+        <div class="masthead clearfix">
+          <div class="inner">
+            <h3 class="masthead-brand"><a href="/">Everything Theatre</a></h3>
+            <nav>
+              <ul class="nav masthead-nav">
+                <li><a href="/upcoming_performances">Performances</a></li>
+                <li><a href="/tickets">Tickets</a></li>
+              </ul>
+            </nav>
           </div>
-
-          <div class="inner cover">
-            <h1 class="cover-heading">{% block header1 %}The Everything Theatre{% endblock %}</h1>
-	    
-            <p class="lead">{% block lead %} Ladies and gentleman, boys and girls; Welcome to The Evrything Theatre. {% endblock %}</p>
-            <p class="lead">
-                {% block content %}
-		Default Content
-		{% endblock %}
-            </p>
-          </div>
-
-          <div class="mastfoot">
-            <div class="inner">
-              <p>Find us on: <a href="#">Facebook, etc.</a>.</p>
-            </div>
-          </div>
-
         </div>
 
-	
-</body>	
+        <div class="inner cover">
+          <h1 class="cover-heading">{% block header1 %}The Everything Theatre{% endblock %}</h1>
+
+          <p class="lead">{% block lead %} Ladies and gentleman, boys and girls; Welcome to The Evrything Theatre. {% endblock %}</p>
+          <div class="content">
+            {% block content %}
+            Default Content
+            {% endblock %}
+          </div>
+        </div>
+
+        <div class="mastfoot">
+          <div class="inner">
+            <p>Find us on: <a href="#">Facebook, etc.</a>.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</body> 
 </html>
