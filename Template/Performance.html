@@ -11,8 +11,8 @@
 	{{p.date}} at {{p.time}}
 {% endblock %}
 {% block content %}
-	<img src="/static/{{p.picture}}" class="img-thumbnail">
-	<p>{{p.description}}</p>
-    <button type="button" class="btn btn-default">Buy Tickets!</button>
+<img src="/static/{{p.picture}}" class="img-thumbnail">
+<p>{{p.description}}</p>
+<a type="button" href="/tickets" class="btn btn-lg">ON SALE!</a>
 {% endblock %}
 
