@@ -5,8 +5,13 @@
 /* Links */
 a,
 a:focus,
-a:hover {
+a:hover,
+a:active {
   color: #fff;
+}
+
+.inactive {
+  color: #555;
 }
 
 /* Custom default button */
