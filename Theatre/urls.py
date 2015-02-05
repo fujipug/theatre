@@ -8,4 +8,5 @@ urlpatterns = patterns('',
     url(r'^home_nontest_v/', 'Theatre.views.home_nontest_v', name='home_nontest_v'),
     url(r'^upcoming_performances/', 'Theatre.views.upcoming_performances', name='upcoming_performances'),
     url(r'^admin/', include(admin.site.urls)),
+	url(r'^location/', 'Theatre.views.location', name='location'),
 )

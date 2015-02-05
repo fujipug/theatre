@@ -37,6 +37,9 @@ def upcoming_performances(request):
 
 def home_nontest_v(request):
     return render(request, 'home_nontest_v.html')
+	
+def location(request):
+	return render(request, 'location.html')
 
 
 
