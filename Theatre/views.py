@@ -41,6 +41,24 @@ def home_nontest_v(request):
 def location(request):
 	return render(request, 'location.html')
 
+def Performance_1(request):
+    return Performance_helper(1)
+
+def Performance_2(request):
+    return Performance_helper(2)
+
+def Performance_3(request):
+    return Performance_helper(3)
+
+def Performance_4(request):
+    return Performance_helper(4)
+
+def Performance_helper(id_num):
+    Performer = Performance.objects.get(id=id_num)
+    template = get_template('Performance.html')
+    html = template.render(Context({'p' : Performer}))
+    return HttpResponse(html)
+
 
 
 #how to add entry to database:

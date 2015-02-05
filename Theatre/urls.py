@@ -9,4 +9,8 @@ urlpatterns = patterns('',
     url(r'^upcoming_performances/', 'Theatre.views.upcoming_performances', name='upcoming_performances'),
     url(r'^admin/', include(admin.site.urls)),
 	url(r'^location/', 'Theatre.views.location', name='location'),
+	url(r'^Performance_1', 'Theatre.views.Performance_1'),
+	url(r'^Performance_2', 'Theatre.views.Performance_2'),
+	url(r'^Performance_3', 'Theatre.views.Performance_3'),
+	url(r'^Performance_4', 'Theatre.views.Performance_4'),
 )
