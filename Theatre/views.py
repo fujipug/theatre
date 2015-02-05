@@ -63,3 +63,18 @@ def location(request):
     #3. from CMD "python manage.py check"
     #4. STOP if you have any errors
     #5. "python manage.py migrate"
+#---------------- -------------------------------------------------------------------------------------------
+#python manage.py flush  
+#deletes database, re-populates as well
+
+#python manage.py dumpdata polls
+#dumps data from the application
+
+#python manage.py dumpdata polls_data.json 
+#to dump into this specific file name, or else if polls_data.json is not specified, it will just dump into the promt 
+
+#python manage.py dumpdata --indent 2 
+#shows all data in the current databases; the indent is to keep things neat and readable
+
+#python manage.py loaddata 
+#reloads everything in polls_data.json

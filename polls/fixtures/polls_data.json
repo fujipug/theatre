@@ -1,0 +1,86 @@
+[
+{
+  "fields": {
+    "picture": "Theatre/Static/RHCP.png",
+    "description": "Friday night, Feburary 6th, the Red Hot Chili Peppers are coming to The Everything Theatre! Concert starts at 8:00 PM and will last until midnight. Anthony Keidis, lead singer of the Red Hot Chili Peppers has promised to perform a song from their upcoming album. These tickets will sell out fast so get them while you can!",
+    "price": "99",
+    "time": "20:00",
+    "date": "2/6/2015",
+    "name": "Red Hot Chili Peppers"
+  },
+  "model": "polls.performance",
+  "pk": 1
+},
+{
+  "fields": {
+    "picture": "Theatre/Static/LindseyS.png",
+    "description": "Sunday night, Febuary 8th, Linsdey Stirling will be performing at The Everything Theatre! Lindsey Stirling is an upcoming violinist who plays while dancing. Her skills are somehting that everyone must see in person. Show starts at 8:00 PM, but make sure to come early to participate in the annual beer pong tournment hosted by Mother Road Brewery!",
+    "price": "45.99",
+    "time": "20:00",
+    "date": "2/8/2015",
+    "name": "Lindsey Stirling"
+  },
+  "model": "polls.performance",
+  "pk": 2
+},
+{
+  "fields": {
+    "picture": "",
+    "description": "Probably the best band in the world ever. If you and your girlfriend haven't gotten it on in a while, make sure to bring her along because this band is a panty dropper for sure. Tickets are $90 each and will be selling out fast. Come early at 5:00 pm as local tattoo artist Dirty Mike will be providing tramp stamps for only $10. See ya' there!",
+    "price": "90",
+    "time": "18:00",
+    "date": "2/15/2015",
+    "name": "Nickelback"
+  },
+  "model": "polls.performance",
+  "pk": 3
+},
+{
+  "fields": {
+    "picture": "",
+    "description": "See the king of pop make a spectacular return to the stage Tuesday February, 17. Will there be moonwalking? You can sure bet on it! Will there be gravity defying dance moves? Duh! Ticket sales will begin February 10, so don't miss out!",
+    "price": "75",
+    "time": "21:00",
+    "date": "2/17/2015",
+    "name": "Michael Jackson's Hologram"
+  },
+  "model": "polls.performance",
+  "pk": 4
+},
+{
+  "fields": {
+    "picture": "/static/AmericanSniper.png",
+    "description": "Navy SEAL sniper Chris Kyle's pinpoint accuracy saves countless lives on the battlefield and turns him into a legend. Back home to his wife and kids after four tours of duty, however, Chris finds that it is the war he can't leave behind.",
+    "price": "10",
+    "time": "17:20",
+    "date": "2/7/15",
+    "name": "American Sniper"
+  },
+  "model": "polls.movie",
+  "pk": 2
+},
+{
+  "fields": {
+    "picture": "Theatre/Static/paddington.png",
+    "description": "A young Peruvian bear travels to London in search of a home. Finding himself lost and alone at Paddington Station, he meets the kindly Brown family, who offer him a temporary haven.",
+    "price": "10",
+    "time": "15:30",
+    "date": "2/9/2015",
+    "name": "Paddington"
+  },
+  "model": "polls.movie",
+  "pk": 3
+},
+{
+  "fields": {
+    "picture": "Theatre/Static/TIG.png",
+    "description": "During World War II, mathematician Alan Turing tries to crack the enigma code with help from fellow mathematicians.",
+    "price": "10",
+    "time": "18:30",
+    "date": "0",
+    "name": "The Imitation Game"
+  },
+  "model": "polls.movie",
+  "pk": 4
+}
+]
