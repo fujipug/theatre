@@ -70,7 +70,7 @@ def location(request):
 #python manage.py dumpdata polls
 #dumps data from the application
 
-#python manage.py dumpdata polls_data.json 
+#python manage.py dumpdata polls > polls_data.json 
 #to dump into this specific file name, or else if polls_data.json is not specified, it will just dump into the promt 
 
 #python manage.py dumpdata --indent 2 
