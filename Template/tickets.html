@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 
+{% block jqcdn %}<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+{% endblock %}
+
 {% block title %} TICKETS {% endblock %}
 
 {% block header1 %} TICKETS {% endblock %}
@@ -7,22 +10,28 @@
 {% block lead %} Upcoming Shows You Won't Want to Miss! {% endblock %}
 
 {% block content %}
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
 	$("#movie").hide();
 	$("#performance-btn").removeClass("inactive");
 	$("#movie-btn").click(function() {
-		$("#performance").hide();
-		$("#movie").show();
-		$("#performance-btn").toggleClass("inactive");
-		$(this).toggleClass("inactive");
+		if ($(this).hasClass("inactive")) {
+			$("#performance").fadeOut("fast", function() {
+				$("#movie").fadeIn("slow", function() {});
+			});
+			$("#performance-btn").toggleClass("inactive");
+			$(this).toggleClass("inactive");
+		}
 	});
 	$("#performance-btn").click(function() {
-		$("#movie").hide();
-		$("#performance").show();
-		$("#movie-btn").toggleClass("inactive");
-		$(this).toggleClass("inactive");
+		if ($(this).hasClass("inactive")) {
+			$("#movie").fadeOut("fast", function() {
+				$("#performance").fadeIn("slow", function() {});
+			});
+		
+			$("#movie-btn").toggleClass("inactive");
+			$(this).toggleClass("inactive");
+		}
 	});
 
 });
@@ -33,13 +42,13 @@ $(document).ready(function() {
 <div id="movie">
 	<h2>Movies</h2>
 	{% for m in Movie%}
-	{{ m.name }} - ${{m.price}}<br>
+	<h4>{{ m.name }} - ${{m.price}}</h4>
 	{%endfor%}
 </div>
 <div id="performance">
 	<h2>Performances</h2>
 	{% for p in Performance%}
-	<a href="/Performance_{{ p.id }}">{{ p.name }}</a> - ${{p.price}}<br>
+	<h4><a href="/Performance_{{ p.id }}">{{ p.name }}</a> - ${{p.price}}<h4>
 	{%endfor%}
 </div>
 
