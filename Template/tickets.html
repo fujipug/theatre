@@ -10,22 +10,18 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
-	$("#performance").hide();
 	$("#movie").hide();
+	$("#performance-btn").removeClass("inactive");
 	$("#movie-btn").click(function() {
 		$("#performance").hide();
 		$("#movie").show();
-		if (! $("#performance-btn").hasClass("inactive")) {
-		    $("#performance-btn").toggleClass("inactive");
-		}
+		$("#performance-btn").toggleClass("inactive");
 		$(this).toggleClass("inactive");
 	});
 	$("#performance-btn").click(function() {
 		$("#movie").hide();
 		$("#performance").show();
-		if (! $("#movie-btn").hasClass("inactive")) {
-			$("#movie-btn").toggleClass("inactive");
-		}
+		$("#movie-btn").toggleClass("inactive");
 		$(this).toggleClass("inactive");
 	});
 
