@@ -7,9 +7,9 @@
 <br/>
 {% block content %}
     {% for p in Performance%}
-	<h2><a id="{{ p.name }}">{{ p.name }}</a></h2><br>
-    {{p.date}} at {{p.time}} price is: {{p.price}}<br>
-    {{p.description}}
+	<h2><a href="/Performance_{{p.id}}">{{ p.name }}</a></h2>
+    {{p.date}}
+    <br><br>
 	{% endfor %}
 {% endblock %}
 
