@@ -4,18 +4,48 @@
 
 {% block header1 %} TICKETS {% endblock %}
 
-{% block lead %} Some tickets and merchandise ...{% endblock %}
+{% block lead %} Upcoming Shows You Won't Want to Miss! {% endblock %}
 
 {% block content %}
-<h2>Movies</h2>
-{% for m in Movie%}
-    {{ m.name }} - ${{m.price}}<br>
-{%endfor%}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+	$("#performance").hide();
+	$("#movie").hide();
+	$("#movie-btn").click(function() {
+		$("#performance").hide();
+		$("#movie").show();
+		if (! $("#performance-btn").hasClass("inactive")) {
+		    $("#performance-btn").toggleClass("inactive");
+		}
+		$(this).toggleClass("inactive");
+	});
+	$("#performance-btn").click(function() {
+		$("#movie").hide();
+		$("#performance").show();
+		if (! $("#movie-btn").hasClass("inactive")) {
+			$("#movie-btn").toggleClass("inactive");
+		}
+		$(this).toggleClass("inactive");
+	});
 
-<h2>Performances</h2>
-{% for p in Performance%}
-<a href="/upcoming_performances#{{ p.name }}">{{ p.name }}</a> - ${{p.price}}<br>
-{%endfor%}
+});
+</script>
+
+<a class="btn btn-lg inactive" id="movie-btn">movies</a>
+<a class="btn btn-lg inactive" id="performance-btn">performances</a>
+<div id="movie">
+	<h2>Movies</h2>
+	{% for m in Movie%}
+	{{ m.name }} - ${{m.price}}<br>
+	{%endfor%}
+</div>
+<div id="performance">
+	<h2>Performances</h2>
+	{% for p in Performance%}
+	<a href="/Performance_{{ p.id }}">{{ p.name }}</a> - ${{p.price}}<br>
+	{%endfor%}
+</div>
 
 {% endblock %}
 
