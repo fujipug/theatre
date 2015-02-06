@@ -32,7 +32,7 @@ $(document).ready(function() {
 			$(".stuff.current").fadeOut("fast", function() {
 				$("#performance").fadeIn("slow", function() {});
 			});
-		
+
 			$(".link-btn").addClass("inactive");
 			$(this).removeClass("inactive");
 			$(".stuff.current").removeClass("current");
@@ -44,7 +44,7 @@ $(document).ready(function() {
 			$(".stuff.current").fadeOut("fast", function() {
 				$("#merch").fadeIn("slow", function() {});
 			});
-		
+
 			$(".link-btn").addClass("inactive");
 			$(this).removeClass("inactive");
 			$(".stuff.current").removeClass("current");
@@ -75,7 +75,8 @@ $(document).ready(function() {
 	<h2>Merchandise</h2>
 	<h4>Shirts come with these designs for $20</h4>
 	{% load staticfiles %}
-	<img class="img-responsive img-thumbnail" src="{% static 'rainbow.png' %}">
+				<img class="img-sm img-responsive img-thumbnail" src="{% static 'rainbow.png' %}">
+				<img class="img-sm img-responsive img-thumbnail" src="{% static 'fade.png' %}">
 </div>
 
 
