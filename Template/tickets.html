@@ -61,19 +61,21 @@ $(document).ready(function() {
 
 <div class="stuff" id="movie">
 	<h2>Movies</h2>
+	<p><em>We play these whenever we like ... more incentive for you to come!</em></p>
 	{% for m in Movie%}
 	<h4>{{ m.name }} - ${{m.price}}</h4>
 	{%endfor%}
 </div>
 <div class="stuff" id="performance">
 	<h2>Performances</h2>
+	<p><em>Click a show for more info!</em></p>
 	{% for p in Performance%}
 	<h4><a href="/Performance_{{ p.id }}">{{ p.name }}</a> - ${{p.price}}</h4>
 	{%endfor%}
 </div>
 <div class="stuff" id="merch">
 	<h2>Merchandise</h2>
-	<h4>Shirts come with these designs for $20</h4>
+	<p><em>Shirts come with these designs for $20</em></p>
 	{% load staticfiles %}
 				<img class="img-sm img-responsive img-thumbnail" src="{% static 'rainbow.png' %}">
 				<img class="img-sm img-responsive img-thumbnail" src="{% static 'fade.png' %}">
