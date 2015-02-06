@@ -3,54 +3,79 @@
 {% block jqcdn %}<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 {% endblock %}
 
-{% block title %} TICKETS {% endblock %}
+{% block title %}Stuff{% endblock %}
 
-{% block header1 %} TICKETS {% endblock %}
+{% block header1 %}Tickets and Merchandise{% endblock %}
 
-{% block lead %} Upcoming Shows You Won't Want to Miss! {% endblock %}
+{% block lead %}Spend Your Hard-Earned Cash Here!{% endblock %}
 
 {% block content %}
 <script>
 $(document).ready(function() {
+	$("#merch").hide();
 	$("#movie").hide();
 	$("#performance-btn").removeClass("inactive");
+	$("#performance").addClass("current");
 	$("#movie-btn").click(function() {
 		if ($(this).hasClass("inactive")) {
-			$("#performance").fadeOut("fast", function() {
+			$(".stuff.current").fadeOut("fast", function() {
 				$("#movie").fadeIn("slow", function() {});
 			});
-			$("#performance-btn").toggleClass("inactive");
-			$(this).toggleClass("inactive");
+			$(".link-btn").addClass("inactive");
+			$(this).removeClass("inactive");
+			$(".stuff.current").removeClass("current");
+			$("#movie").addClass("current");
 		}
 	});
 	$("#performance-btn").click(function() {
 		if ($(this).hasClass("inactive")) {
-			$("#movie").fadeOut("fast", function() {
+			$(".stuff.current").fadeOut("fast", function() {
 				$("#performance").fadeIn("slow", function() {});
 			});
 		
-			$("#movie-btn").toggleClass("inactive");
-			$(this).toggleClass("inactive");
+			$(".link-btn").addClass("inactive");
+			$(this).removeClass("inactive");
+			$(".stuff.current").removeClass("current");
+			$("#performance").addClass("current");
+		}
+	});
+	$("#merch-btn").click(function() {
+		if ($(this).hasClass("inactive")) {
+			$(".stuff.current").fadeOut("fast", function() {
+				$("#merch").fadeIn("slow", function() {});
+			});
+		
+			$(".link-btn").addClass("inactive");
+			$(this).removeClass("inactive");
+			$(".stuff.current").removeClass("current");
+			$("#merch").addClass("current");
 		}
 	});
 
 });
 </script>
 
-<a class="btn btn-lg inactive" id="movie-btn">movies</a>
-<a class="btn btn-lg inactive" id="performance-btn">performances</a>
-<div id="movie">
+<a class="link-btn btn btn-lg inactive" id="performance-btn">performances</a>
+<a class="link-btn btn btn-lg inactive" id="movie-btn">movies</a>
+<a class="link-btn btn btn-lg inactive" id="merch-btn">merchandise</a>
+
+<div class="stuff" id="movie">
 	<h2>Movies</h2>
 	{% for m in Movie%}
 	<h4>{{ m.name }} - ${{m.price}}</h4>
 	{%endfor%}
 </div>
-<div id="performance">
+<div class="stuff" id="performance">
 	<h2>Performances</h2>
 	{% for p in Performance%}
-	<h4><a href="/Performance_{{ p.id }}">{{ p.name }}</a> - ${{p.price}}<h4>
+	<h4><a href="/Performance_{{ p.id }}">{{ p.name }}</a> - ${{p.price}}</h4>
 	{%endfor%}
 </div>
+<div class="stuff" id="merch">
+	<h2>Merchandise</h2>
+	<h4>blah</h4>
+</div>
+
 
 {% endblock %}
 
