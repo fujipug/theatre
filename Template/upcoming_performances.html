@@ -7,7 +7,7 @@
 <br/>
 {% block content %}
     {% for p in Performance%}
-	<h2><a href="/Performance_{{p.id}}">{{ p.name }}</a></h2>
+	<h3><a href="/Performance_{{p.id}}">{{ p.name }}</a></h3>
     {{p.date}}
     <br><br>
 	{% endfor %}

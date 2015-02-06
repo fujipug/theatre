@@ -1,62 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-			<title> The Everything Theatre</title>
-			<!-- Bootstrap -->
-			<!-- Latest compiled and minified CSS -->
-				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-			{% load staticfiles %}
-			<link rel="stylesheet" href="{% static 'home.css' %}">
-
-<body>
-	<div class = "pic-wrap">
-	<div class="site-wrapper">
-
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div class="masthead clearfix">
-            <div class="inner">
-				<h3 class="masthead-brand"><a href="/">Everything Theatre</a></h3>
-				<nav>
-					<ul class="nav masthead-nav">
-						<li><a href="/upcoming_performances">Performances</a></li>
-						<li><a href="/tickets">Tickets</a></li>
-						<li><a href="/location">Location</a></li>
-					</ul>
-				</nav>
-			</div>
-		  </div>
-
-		  <div class="inner cover">
-			<h1 class="cover-heading">{% block header1 %}Location Details{% endblock %}</h1>
-			<img src="{% static 'TET.jpg' %}" alt="The Everything Theatre"></br></br>
-			<p class="lead">{% block lead %}The Everything Theatre{% endblock %}</br>
-							{% block content %}
-							1700 Madison Street</br>
-							Seattle, WA 98104</br>
-							United States
-							{% endblock %}
+{% extends "base.html" %}
+{% block title %} Location {% endblock %}	
+{% load staticfiles %}
+			
+<h1 class="cover-heading">{% block header1 %}Location Details{% endblock %}</h1>
+{% block content %} 
+<img src="{% static 'TET.jpg' %}" alt="The Everything Theatre"></br></br>
+<p class="lead">{% block lead %}The Everything Theatre{% endblock %}</br>
+				
+				1700 Madison Street</br>
+				Seattle, WA 98104</br>
+				United States
+				
 			</p>
-		  </div>
+{% endblock %}
 
-		  <div class="mastfoot">
-			<div class="inner">
-				<p>Find us on: <a href="#"> Facebook </a>.</p>
-		</div>
-	</div>
-	</div>
-	</div>
-	</div>
-	<!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/docs.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-</body>
-</html>
+
+
+
