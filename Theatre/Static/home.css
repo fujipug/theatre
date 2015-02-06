@@ -24,6 +24,10 @@ a:active {
   border: 1px solid #fff;
 }
 
+.img-sm {
+  width: 200px;
+  height: 200px;
+}
 
 /*
  * Base structure
